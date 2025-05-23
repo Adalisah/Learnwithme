@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn Shona for Kids</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f8ff;
+            color: #333;
+        }
+
+        nav {
+            background-color: #fff3f3;
+            padding: 10px;
+            text-align: center;
+            border-bottom: 2px solid #ffb3b3;
+        }
+
+        nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            color: #ff6f61;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        header {
+            background-color: #ff6f61;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            border-bottom: 5px solid #f4a261;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+        }
+
+        .cards {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            padding: 30px;
+            gap: 20px;
+        }
+
+        .card {
+            background-color: #ffe6e6;
+            border: 2px solid #ffb3b3;
+            border-radius: 12px;
+            width: 250px;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .card img {
+            width: 100px;
+            height: 100px;
+            object-fit: contain;
+        }
+
+        .card h2 {
+            font-size: 1.5rem;
+            margin-top: 10px;
+        }
+
+        .card p {
+            font-size: 1.2rem;
+            color: #666;
+        }
+
+        .card button {
+            margin-top: 10px;
+            padding: 12px;
+            background-color: #ffca28;
+            border: none;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .card button:hover {
+            background-color: #ff9800;
+            transform: scale(1.1);
+        }
+
+        .card:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        }
+
+        .video-container {
+            display: none;
+            margin-top: 10px;
+            width: 100%;
+            max-width: 300px;
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .video-container video {
+            width: 100%;
+            height: 100%;
+        }
+
+        #about {
+            padding: 40px;
+            background-color: #fff8f0;
+            text-align: center;
+        }
+
+        #about h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+        }
+
+        #about p {
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: auto;
+            color: #555;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #ff6f61;
+            color: white;
+            font-size: 1rem;
+        }
+
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .cards {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="#learn">Learn</a>
+        <a href="#about">About</a>
+    </nav>
+
+    <header>
+        <h1>Learn Shona for Kids</h1>
+        <p>Fun and easy Shona words with local videos!</p>
+    </header>
+
+    <main id="learn">
+        <section class="cards">
+            <!-- Word cards go here (same as before) -->
+            <div class="card">
+                <img src="hello.jpeg" alt="Hello Image">
+                <h2>Mhoro</h2>
+                <p>Hello</p>
+                <button onclick="toggleVideo('hello')">🎥</button>
+                <div id="video-hello" class="video-container">
+                    <video id="vid-hello" controls>
+                        <source src="hello.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="grandmother.jpeg" alt="Grandmother Image">
+                <h2>Gogo</h2>
+                <p>Grand Mother</p>
+                <button onclick="toggleVideo('gogo')">🎥</button>
+                <div id="video-gogo" class="video-container">
+                    <video id="vid-gogo" controls>
+                        <source src="mbuya.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="thankyou.jpeg" alt="Thank You Image">
+                <h2>Ndatenda</h2>
+                <p>Thank You</p>
+                <button onclick="toggleVideo('ndatenda')">🎥</button>
+                <div id="video-ndatenda" class="video-container">
+                    <video id="vid-ndatenda" controls>
+                        <source src="ThankYou.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="please.jpeg" alt="Please Image">
+                <h2>Ndokumbirawo</h2>
+                <p>Please</p>
+                <button onclick="toggleVideo('ndokumbirawo')">🎥</button>
+                <div id="video-ndokumbirawo" class="video-container">
+                    <video id="vid-ndokumbirawo" controls>
+                        <source src="Please.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="Grandfather.jpeg" alt="Grandfather Image">
+                <h2>Sekuru</h2>
+                <p>Grand Father</p>
+                <button onclick="toggleVideo('sekuru')">🎥</button>
+                <div id="video-sekuru" class="video-container">
+                    <video id="vid-sekuru" controls>
+                        <source src="sekuru.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+
+            <div class="card">
+                <img src="water.jpeg" alt="Water Image">
+                <h2>Mvura</h2>
+                <p>Water</p>
+                <button onclick="toggleVideo('mvura')">🎥</button>
+                <div id="video-mvura" class="video-container">
+                    <video id="vid-mvura" controls>
+                        <source src="Water.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <section id="about">
+        <h2>About This Site</h2>
+        <p>We created this platform to help kids learn Shona in a fun, visual way! Each card includes an image, word, and a short local video for pronunciation.</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Learn Shona. Made for kids with ❤️. <a href="https://github.com/yourusername" target="_blank">GitHub</a></p>
+    </footer>
+
+    <script>
+        function toggleVideo(word) {
+            const videoContainer = document.getElementById(`video-${word}`);
+            const video = document.getElementById(`vid-${word}`);
+            const button = videoContainer.previousElementSibling;
+
+            if (videoContainer.style.display === "block") {
+                video.pause();
+                video.currentTime = 0;
+                videoContainer.style.display = "none";
+                button.textContent = "🎥";
+            } else {
+                videoContainer.style.display = "block";
+                video.play();
+                button.textContent = "⏸️";
+            }
+        }
+    </script>
+</body>
+</html>
